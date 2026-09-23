@@ -1,74 +1,51 @@
 using UnityEngine;
+using UnityEngine.InputSystem; 
 using UnityEngine.Scripting.APIUpdating;
 
-/* This is a script I have from old projects for a basic 
-    player controller
+/* This was based off of an old script I made for previous projects, but updated for the new input system 
+   and with no jump logic. 
 */
-[RequireComponent(typeof(Rigidbody))]
+// [RequireComponent(typeof(Rigidbody))]
 public class PlayerController : MonoBehaviour
 {
     [SerializeField] private float speed = 5f; 
-    [SerializeField] private float jumpForce = 5; 
+    [SerializeField] private float jumpHeight = 5; 
+    [SerializeField] private float gravity = -9.8f; 
 
     Rigidbody rb;
-    bool isGrounded;
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
+    Vector3 moveInput; 
+    Vector3 velocity; 
+    CharacterController controller; 
+    
     void Start()
     {
+        controller = GetComponent<CharacterController>(); 
         rb = GetComponent<Rigidbody>();
     }
 
-    // Update is called once per frame
+
+    public void Move(InputAction.CallbackContext context)
+    {
+        moveInput = context.ReadValue<Vector2>(); 
+        Debug.Log($"Move input: " + moveInput); 
+    }
+
+    public void Jump(InputAction.CallbackContext context)
+    {
+        if (context.performed && controller.isGrounded)
+        {
+            Debug.Log($"Should jump"); 
+            velocity.y = Mathf.Sqrt(jumpHeight * -2f * gravity); 
+        }
+    }
+    // Moved this into Update() so it calls more frequently, makes movement smoother
     void Update()
     {
-        Jump();
-    }
+        Vector3 move = new Vector3(moveInput.x, 0, moveInput.y); 
+        controller.Move(move * speed * Time.deltaTime); 
 
-    void FixedUpdate()
-    {
-        Move();
-    }
-
-    void Move()
-    {
-        float horizontal = Input.GetAxis("Horizontal");
-        float vertical = Input.GetAxis("Vertical");
-
-        Debug.Log("Horizontal: " + horizontal);
-        Debug.Log("Vectical: " + vertical);
-
-        // Compute movement vector.
-        Vector3 movement = new Vector3(horizontal, 0, vertical).normalized;
-
-        // Apply force.
-        rb.AddForce(movement * speed);
-    }
-
-    void Jump()
-    {
-        if(Input.GetKeyDown(KeyCode.Space) && isGrounded)
-        {
-            rb.AddForce(Vector3.up * jumpForce, ForceMode.Impulse);
-
-            // disable jump
-            isGrounded = false; 
-        }
-    }
-
-    void OnCollisionEnter(Collision collision)
-    {
-        Debug.Log("Collided with " + collision.transform.name);
-
-        // Assume in list of contacts gound is always the first. 
-        ContactPoint contact = collision.contacts[0];
-
-        if(contact.normal.y > 0.5f)
-        {
-            isGrounded = true; 
-        }
-
-        Debug.Log("Contact position:  " + contact.point);
-        Debug.Log("Contact normal:  " + contact.normal);
+        velocity.y += gravity * Time.deltaTime; 
+        controller.Move(velocity * Time.deltaTime); 
 
     }
 }
