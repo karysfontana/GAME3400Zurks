@@ -2,8 +2,11 @@ using UnityEngine;
 using UnityEngine.InputSystem; 
 using UnityEngine.Scripting.APIUpdating;
 
-/* This was based off of an old script I made for previous projects, but updated for the new input system 
-   and with no jump logic. 
+/* 
+   This was based off of an old script I made for previous projects, but updated for the new input system.
+   I updated it because of the r/unity subreddit which is linked in the design doc. I used Unity's docs to 
+   update the old input system with the new-the math was mostly the same but for the FPS camera I used 
+   another old scripts math. 
 */
 // [RequireComponent(typeof(Rigidbody))]
 public class PlayerController : MonoBehaviour
