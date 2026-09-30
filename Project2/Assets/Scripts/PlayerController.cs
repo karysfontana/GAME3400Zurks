@@ -15,6 +15,7 @@ using UnityEngine.Scripting.APIUpdating;
 
 public class PlayerController : MonoBehaviour
 {
+
     [Header("Movement")]
     [SerializeField] private float speed = 5f; 
     [SerializeField] private float jumpHeight = 5; 
@@ -33,6 +34,7 @@ public class PlayerController : MonoBehaviour
     CharacterController controller;
     float verticalRotation = 0f;  
     bool isSprinting = false; 
+    bool canMove = true;
     
     void Start()
     {
@@ -87,6 +89,11 @@ public class PlayerController : MonoBehaviour
 
     void Update()
     {
+        if (!canMove)
+        {
+        return;
+        }
+
         float currentSpeed = isSprinting ? speed * sprintMod : speed;
         // Mouse input 
         float mouseX = lookInput.x * mouseSensitivity * Time.deltaTime;
@@ -112,14 +119,30 @@ public class PlayerController : MonoBehaviour
         // probs be best to put that in its own camera script. 
     }
 
+    public void StopPlayer()
+    {
+        canMove = false;
+        moveInput = Vector3.zero;
+        velocity = Vector3.zero;
+
+        Cursor.lockState = CursorLockMode.None;
+        Cursor.visible = true;
+    }
+
     public void Respawn(Vector3 position)
     {
-    controller.enabled = false;
+        controller.enabled = false;
 
-    transform.position = position;
+        transform.position = position;
 
-    velocity = Vector3.zero;
+        velocity = Vector3.zero;
+        moveInput = Vector3.zero;
 
-    controller.enabled = true;
+        controller.enabled = true;
+
+        canMove = true;
+
+        Cursor.lockState = CursorLockMode.Locked;
+        Cursor.visible = false;
     }
 }
