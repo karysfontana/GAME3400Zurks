@@ -19,11 +19,12 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private float speed = 5f; 
     [SerializeField] private float jumpHeight = 5; 
     [SerializeField] private float gravity = -9.8f; 
+    [SerializeField] private float sprintMod = 1.5f; 
 
     [Header("Cam")]
     // PUT MAIN CAMERA HERE 
     [SerializeField] private Transform cameraTransform; 
-    [SerializeField] private float mouseSensitivity = 15f; 
+    [SerializeField] private float mouseSensitivity = 10f; 
     [SerializeField] private float lookLimit = 80f; 
 
     Vector3 moveInput; 
@@ -31,6 +32,7 @@ public class PlayerController : MonoBehaviour
     Vector3 velocity; 
     CharacterController controller;
     float verticalRotation = 0f;  
+    bool isSprinting = false; 
     
     void Start()
     {
@@ -62,6 +64,21 @@ public class PlayerController : MonoBehaviour
         }
     }
 
+    // Sprint function (new to script 9/29)
+    public void Sprint(InputAction.CallbackContext context)
+    {
+        if (context.performed)
+        {
+            Debug.Log($"Sprinting"); 
+            isSprinting = true; 
+        }
+        else if (context.canceled)
+        {
+            Debug.Log($"Walking");
+            isSprinting = false; 
+        }
+    }
+
     // For first person perspective 
     public void Look(InputAction.CallbackContext context)
     {
@@ -70,6 +87,7 @@ public class PlayerController : MonoBehaviour
 
     void Update()
     {
+        float currentSpeed = isSprinting ? speed * sprintMod : speed;
         // Mouse input 
         float mouseX = lookInput.x * mouseSensitivity * Time.deltaTime;
         float mouseY = lookInput.y * mouseSensitivity * Time.deltaTime;
@@ -84,9 +102,8 @@ public class PlayerController : MonoBehaviour
         // If not FPS, uncomment below line out and comment FPS line
         // Vector3 move = new Vector3(moveInput.x, 0, moveInput.y); 
         Vector3 move = (transform.forward * moveInput.y) + (transform.right * moveInput.x); 
-
-        controller.Move(move * speed * Time.deltaTime); 
-
+        controller.Move(move * currentSpeed * Time.deltaTime);
+        
         // Jump
         velocity.y += gravity * Time.deltaTime; 
         controller.Move(velocity * Time.deltaTime); 
