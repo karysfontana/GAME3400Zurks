@@ -111,4 +111,15 @@ public class PlayerController : MonoBehaviour
         // If not FPS, add in camera movement logic tho it would 
         // probs be best to put that in its own camera script. 
     }
+
+    public void Respawn(Vector3 position)
+    {
+    controller.enabled = false;
+
+    transform.position = position;
+
+    velocity = Vector3.zero;
+
+    controller.enabled = true;
+    }
 }
