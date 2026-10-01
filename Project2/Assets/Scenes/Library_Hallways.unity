@@ -448,7 +448,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::GameOverManager
   gameOverPanel: {fileID: 1349405810}
   respawnPoint: {fileID: 842097901}
-  zurk: {fileID: 1954844670}
+  zurks:
+  - {fileID: 1954844670}
+  - {fileID: 1542993534}
+  - {fileID: 928482098}
 --- !u!1 &78328220
 GameObject:
   m_ObjectHideFlags: 0
@@ -5949,6 +5952,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cd5fe62025b524078b8b330c6f0829f3, type: 3}
+--- !u!4 &928482098 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 9771066f184df44219d507e61359d599, type: 3}
+  m_PrefabInstance: {fileID: 279651401}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &939894218 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 1eda5277b7e9040cf98e868078bf6579, type: 3}
@@ -14048,6 +14056,11 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 6317106008045385693, guid: ecf7ac3aef827467a90b2c0a64ff6d2f, type: 3}
+--- !u!4 &1542993534 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 9771066f184df44219d507e61359d599, type: 3}
+  m_PrefabInstance: {fileID: 1421051742}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &1546981414 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: cd5fe62025b524078b8b330c6f0829f3, type: 3}

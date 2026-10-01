@@ -3,30 +3,27 @@ using UnityEngine.AI;
 
 public class GameOverManager : MonoBehaviour
 {
-    [Header("UI")]
     public GameObject gameOverPanel;
-
-    [Header("Player")]
     public Transform respawnPoint;
 
-    [Header("Zurk")]
-    public Transform zurk;
+    public Transform[] zurks;
 
     private PlayerController player;
 
-    private Vector3 zurkStartPosition;
-    private Quaternion zurkStartRotation;
+    private Vector3[] zurkStartPositions;
+    private Quaternion[] zurkStartRotations;
 
     void Start()
     {
-        // Hide Game Over UI when the game starts
         gameOverPanel.SetActive(false);
 
-        // Save Zurk's starting position
-        if (zurk != null)
+        zurkStartPositions = new Vector3[zurks.Length];
+        zurkStartRotations = new Quaternion[zurks.Length];
+
+        for (int i = 0; i < zurks.Length; i++)
         {
-            zurkStartPosition = zurk.position;
-            zurkStartRotation = zurk.rotation;
+            zurkStartPositions[i] = zurks[i].position;
+            zurkStartRotations[i] = zurks[i].rotation;
         }
     }
 
@@ -44,25 +41,27 @@ public class GameOverManager : MonoBehaviour
 
     public void RestartGame()
     {
-        if (player != null)
+        
+        for (int i = 0; i < zurks.Length; i++)
         {
-            player.Respawn(respawnPoint.position);
-        }
-
-        if (zurk != null)
-        {
-            NavMeshAgent agent = zurk.GetComponent<NavMeshAgent>();
+            NavMeshAgent agent = zurks[i].GetComponent<NavMeshAgent>();
 
             if (agent != null && agent.isOnNavMesh)
             {
-                agent.Warp(zurkStartPosition);
+                agent.Warp(zurkStartPositions[i]);
             }
             else
             {
-                zurk.position = zurkStartPosition;
+                zurks[i].position = zurkStartPositions[i];
             }
 
-            zurk.rotation = zurkStartRotation;
+            zurks[i].rotation = zurkStartRotations[i];
+        }
+
+        
+        if (player != null)
+        {
+            player.Respawn(respawnPoint.position);
         }
 
         gameOverPanel.SetActive(false);
