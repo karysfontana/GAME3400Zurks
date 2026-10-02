@@ -13641,7 +13641,7 @@ MonoBehaviour:
   gravity: -20
   sprintMod: 1.5
   cameraTransform: {fileID: 33541652}
-  mouseSensitivity: 40
+  mouseSensitivity: 30
   lookLimit: 180
 --- !u!114 &1531395260
 MonoBehaviour:
