@@ -13642,7 +13642,7 @@ MonoBehaviour:
   sprintMod: 1.5
   cameraTransform: {fileID: 33541652}
   mouseSensitivity: 30
-  lookLimit: 180
+  lookLimit: 100
 --- !u!114 &1531395260
 MonoBehaviour:
   m_ObjectHideFlags: 0
