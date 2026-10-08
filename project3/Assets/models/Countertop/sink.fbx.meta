@@ -3,7 +3,27 @@ guid: 7be82c3221e5a284ab5e7be2b48e38e5
 ModelImporter:
   serializedVersion: 24600
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: CabinetWood
+    second: {fileID: 2100000, guid: a1a41ea5e4d664c518e638a30358cbca, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Cabinet_handle
+    second: {fileID: 2100000, guid: 1ee3711de05934e3b92cf35ef4ea80c1, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Sink
+    second: {fileID: 2100000, guid: c986e0afa82334ca2a7b285588d80f80, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: backsplash
+    second: {fileID: 2100000, guid: 3d19b150ca474494db20f80d2fb27833, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0

@@ -3,7 +3,17 @@ guid: 69422d32f338e7743b71a865b6bed4bf
 ModelImporter:
   serializedVersion: 24600
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: RefreidgeratorMetal
+    second: {fileID: 2100000, guid: b5bfb7693383540028eebcbe7457f2df, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Wood_handle_knife
+    second: {fileID: 2100000, guid: 05c6cd475ba6843d28c6297bf9e36e30, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0

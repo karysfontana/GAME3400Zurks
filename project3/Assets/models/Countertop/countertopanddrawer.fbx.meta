@@ -3,7 +3,17 @@ guid: 9cec3eaa50ae291488f2cbeb10a4d0d3
 ModelImporter:
   serializedVersion: 24600
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: CabinetWood
+    second: {fileID: 2100000, guid: 16d3b923104094a059a152f3ffa40e8f, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Cabinet_handle
+    second: {fileID: 2100000, guid: 036121cefbe5741719f0457502e7212d, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0

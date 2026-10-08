@@ -3,7 +3,52 @@ guid: a521593409e49164da5bf9efcbe6caed
 ModelImporter:
   serializedVersion: 24600
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Bowl1
+    second: {fileID: 2100000, guid: 441cb860332da4e68a1978e4300d1ffe, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Bowl2
+    second: {fileID: 2100000, guid: 5c54b82e3667b48549057cd047c6ecb1, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: CharcoutorieWood
+    second: {fileID: 2100000, guid: 8c8e5a58583a746098b37ab2520b0161, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Cheese1
+    second: {fileID: 2100000, guid: e9066f57ac1e843c591bf4786b127081, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Cheese2
+    second: {fileID: 2100000, guid: 5ac117f5084c84b938afbdd1d7ea8338, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Cheese3
+    second: {fileID: 2100000, guid: b05b5bbcd496446dc909cf1f31cc58a3, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: grape
+    second: {fileID: 2100000, guid: a92f4912891304a10bf5df61f85063f7, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: pear
+    second: {fileID: 2100000, guid: 94981a6b9a51643c29de5d0b92c55e24, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: pear_stem
+    second: {fileID: 2100000, guid: c89bbb83ce40545c88c8d02195ec8278, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0

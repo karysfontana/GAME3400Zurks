@@ -3,7 +3,17 @@ guid: 71d069c9853f9e2489f58d1778688ccd
 ModelImporter:
   serializedVersion: 24600
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Wood_handle_knife
+    second: {fileID: 2100000, guid: 05c6cd475ba6843d28c6297bf9e36e30, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: knifeblock
+    second: {fileID: 2100000, guid: 6c12d623455124417abf933348cfc1c4, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0

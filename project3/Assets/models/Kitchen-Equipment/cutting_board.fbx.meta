@@ -3,7 +3,12 @@ guid: f59b136f79d99054d93132195763daf7
 ModelImporter:
   serializedVersion: 24600
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: CuttingBoard
+    second: {fileID: 2100000, guid: 58184320994b648dfadc42e013ea4785, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
