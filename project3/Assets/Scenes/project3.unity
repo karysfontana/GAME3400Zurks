@@ -6064,8 +6064,8 @@ MonoBehaviour:
   jumpHeight: 5
   gravity: -9.8
   cameraTransform: {fileID: 1528715660}
-  mouseSensitivity: 15
-  lookLimit: 200
+  mouseSensitivity: 12
+  lookLimit: 160
 --- !u!114 &1581145570
 MonoBehaviour:
   m_ObjectHideFlags: 0
