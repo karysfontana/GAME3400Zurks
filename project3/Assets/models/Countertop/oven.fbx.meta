@@ -3,7 +3,27 @@ guid: 5002c09576472e44690b4cc896cd25aa
 ModelImporter:
   serializedVersion: 24600
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Glass
+    second: {fileID: 2100000, guid: d23f94e3a21354bafb9e18aa8c415ad6, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Maya_Lambert1
+    second: {fileID: 2100000, guid: dfad502bd5c7346e2ba9619b7d693e63, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Oven_Steel
+    second: {fileID: 2100000, guid: 1fda4a5456e104ed292df14a88243231, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Oven_handle
+    second: {fileID: 2100000, guid: 816db72ea2c404e168cf7759dcc64e71, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0

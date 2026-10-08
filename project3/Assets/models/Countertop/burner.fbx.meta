@@ -3,7 +3,22 @@ guid: 25d80ed199618f6439d5993a1baa7dbf
 ModelImporter:
   serializedVersion: 24600
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Heating_part__induction
+    second: {fileID: 2100000, guid: 89fbbf2beaa1643bb846c5c9a626b6c2, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Oven_Steel
+    second: {fileID: 2100000, guid: d70e1a35eef3346f6ac0e1cc08d1487c, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: lambert6
+    second: {fileID: 2100000, guid: 91ab2ad236b154245bb60db70fadb0b6, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
