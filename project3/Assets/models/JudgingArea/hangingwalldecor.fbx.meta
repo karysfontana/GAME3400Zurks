@@ -3,7 +3,17 @@ guid: d8b64696b3c873b4a9d84d9e416c5bbb
 ModelImporter:
   serializedVersion: 24600
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: HangingThingWhite
+    second: {fileID: 2100000, guid: def89df3cb04943999d1bf12a9de09ad, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: hangingthingblue
+    second: {fileID: 2100000, guid: eda79e3071c844f95bf87ed881b5eb6c, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0

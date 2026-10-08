@@ -3,7 +3,27 @@ guid: dbae499f3f0f8054ab620c14be1b5043
 ModelImporter:
   serializedVersion: 24600
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Plate
+    second: {fileID: 2100000, guid: cd8ba6a8a99d1407fa59fa32d5d6669b, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: placemat
+    second: {fileID: 2100000, guid: 0e815e2207905405a891e301c4ca97db, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: tablebottom
+    second: {fileID: 2100000, guid: 0f3cf0593212444be9e904fd878d64d1, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: tabletop
+    second: {fileID: 2100000, guid: e2baf5fd2079b47c4826caaf72cb04e4, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
