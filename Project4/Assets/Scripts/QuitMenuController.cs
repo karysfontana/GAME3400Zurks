@@ -1,8 +1,29 @@
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 public class QuitMenuController : MonoBehaviour
 {
     public GameObject quitMenu;
+
+    void Start()
+    {
+        // Game starts with the quit menu closed
+        quitMenu.SetActive(false);
+    }
+
+    void Update()
+    {
+        if (Keyboard.current != null &&
+            Keyboard.current.escapeKey.wasPressedThisFrame)
+        {
+            ToggleQuitMenu();
+        }
+    }
+
+    public void ToggleQuitMenu()
+    {
+        quitMenu.SetActive(!quitMenu.activeSelf);
+    }
 
     public void OpenQuitMenu()
     {
