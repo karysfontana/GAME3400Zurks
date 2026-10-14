@@ -10,24 +10,30 @@ public class PhoneInteraction : MonoBehaviour
 
     [Header("Events")]
     public UnityEvent onPhonePickedUp;
+    public UnityEvent onPhonePutDown; 
 
-    private bool isPickedUp = false;
+    public static bool isPickedUp = false;
 
     public void TryInteract()
     {
-        if (player == null || isPickedUp)
-        {
-            return;
-        }
 
         float distance = Vector3.Distance(
             player.position,
             transform.position
         );
-
-        if (distance <= interactionDistance)
+        if (isPickedUp == false)
         {
-            PickUpPhone();
+            if (distance <= interactionDistance)
+            {
+                PickUpPhone();
+            }
+        }
+        else
+        {
+            if (distance <= interactionDistance)
+            {
+                PutDownPhone(); 
+            }
         }
     }
 
@@ -38,5 +44,13 @@ public class PhoneInteraction : MonoBehaviour
         Debug.Log("Player picked up the phone!");
 
         onPhonePickedUp?.Invoke();
+    }
+
+    private void PutDownPhone()
+    {
+        isPickedUp = false; 
+
+        Debug.Log($"Player put phone down."); 
+        onPhonePutDown?.Invoke(); 
     }
 }
