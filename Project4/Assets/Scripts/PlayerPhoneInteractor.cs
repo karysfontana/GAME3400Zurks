@@ -1,4 +1,3 @@
-
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -15,6 +14,8 @@ public class PlayerPhoneInteractor : MonoBehaviour
 
         if (Keyboard.current.eKey.wasPressedThisFrame)
         {
+            Debug.Log("E key pressed!");
+
             if (phone != null)
             {
                 phone.TryInteract();
