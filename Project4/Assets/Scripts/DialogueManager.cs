@@ -13,6 +13,9 @@ public class DialogueManager : MonoBehaviour
     public TextMeshProUGUI nameBox; 
     public TextMeshProUGUI textBox; 
     public GameObject dialogueGameObj; 
+    [SerializeField] private AudioSource sfxSource; 
+    [SerializeField] private AudioClip hangUpSfx; 
+
 
     [Header("Text Config")]
     public float typingSpeed = 0.05f; 
@@ -43,16 +46,26 @@ public class DialogueManager : MonoBehaviour
     /** 
         Function to start up dialogue. Must be public bc it will be called from another script. 
     **/ 
-    public void StartDia(DialogueLine[] newLines)
+
+public void StartDia(DialogueLine[] newLines)
+{
+    if (newLines == null || newLines.Length == 0)
     {
-        // Must activate obj bc it starts as inactive
-        dialogueGameObj.SetActive(true); 
-        dialogueFinished = false; 
-        dialogueLines = newLines; 
-        justStarted = true; 
-        typingCo = StartCoroutine(TypeLine(dialogueLines[currentInd]));
+        Debug.LogWarning("No dialogue lines assigned!");
+        return;
     }
 
+    currentInd = 0;
+    isTyping = false;
+
+    dialogueGameObj.SetActive(true);
+    dialogueFinished = false;
+    dialogueLines = newLines;
+    justStarted = true;
+
+
+    typingCo = StartCoroutine(TypeLine(dialogueLines[currentInd]));
+}
     // Update is called once per frame
     void Update()
     {
@@ -89,7 +102,12 @@ public class DialogueManager : MonoBehaviour
                         nameBox.text = ""; 
                     }
                     dialogueFinished = true; 
-                    // Would maybe call in SFX here. 
+                    if (sfxSource)
+                    {
+                        sfxSource.clip = hangUpSfx;
+                        sfxSource.Play();
+                    }
+
                     dialogueGameObj.SetActive(false); 
                 }
             }

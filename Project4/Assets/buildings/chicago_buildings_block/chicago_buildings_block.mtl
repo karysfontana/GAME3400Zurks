@@ -1,0 +1,72 @@
+# MTL file - created by a modified js OBJExporter
+
+newmtl Sidewalks
+Tr 0.0000
+Tf 1.0000 1.0000 1.0000
+illum 1
+Pm 1
+Pr 1
+Pds 1
+Pl 1
+Ka 1 1 1
+Kd 1 1 1
+Ke 0 0 0
+map_Kd Sidewalks.png
+map_Pm metalnessMap1.png
+map_Pr metalnessMap1.png
+
+newmtl BLACK_BUILD
+Tr 0.0000
+Tf 1.0000 1.0000 1.0000
+illum 1
+Pm 1
+Pr 1
+Pds 1
+Pl 1
+Ka 1 1 1
+Kd 1 1 1
+Ke 0 0 0
+map_Kd BLACK_BUILD.png
+map_Pm metalnessMap2.png
+map_Pr metalnessMap2.png
+
+newmtl Bricks
+Tr 0.0000
+Tf 1.0000 1.0000 1.0000
+illum 1
+Pr 1
+Pds 1
+Pl 1
+Ka 1 1 1
+Kd 1 1 1
+Ke 0 0 0
+map_Kd Bricks.png
+
+newmtl Bulbs
+Tr 0.0000
+Tf 1.0000 1.0000 1.0000
+illum 1
+Pm 1
+Pr 1
+Pds 1
+Pl 1
+Ka 1 1 1
+Kd 1 1 1
+Ke 1 1 1
+map_Kd Bulbs.png
+map_Ke emissiveMap4.png
+
+newmtl Building
+Tr 0.0000
+Tf 1.0000 1.0000 1.0000
+illum 1
+Pm 1
+Pr 1
+Pds 1
+Pl 1
+Ka 1 1 1
+Kd 1 1 1
+Ke 0 0 0
+map_Kd Building.png
+map_Pm metalnessMap5.png
+map_Pr metalnessMap5.png
