@@ -6,8 +6,8 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/TESTPHONE.unity
-    guid: da719a001e0d84c5580c19f10ebde82c
+    path: Assets/Scenes/street1980s.unity
+    guid: 673fc2fe273684f46a2d4d4641bb81f5
   - enabled: 1
     path: Assets/Scenes/street2020s.unity
     guid: f07fd9513e491451ab6256d97965f17a
