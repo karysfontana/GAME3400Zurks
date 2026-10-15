@@ -13,6 +13,9 @@ public class DialogueManager : MonoBehaviour
     public TextMeshProUGUI nameBox; 
     public TextMeshProUGUI textBox; 
     public GameObject dialogueGameObj; 
+    [SerializeField] private AudioSource sfxSource; 
+    [SerializeField] private AudioClip hangUpSfx; 
+
 
     [Header("Text Config")]
     public float typingSpeed = 0.05f; 
@@ -99,6 +102,11 @@ public void StartDia(DialogueLine[] newLines)
                         nameBox.text = ""; 
                     }
                     dialogueFinished = true; 
+                    if (sfxSource)
+                    {
+                        sfxSource.clip = hangUpSfx;
+                        sfxSource.Play();
+                    }
 
                     dialogueGameObj.SetActive(false); 
                 }

@@ -34,24 +34,13 @@ public class DialogueTrigger : MonoBehaviour
         }
     }
 
-    public void Update()
-    {
-        if (DialogueManager.instance.dialogueFinished == true)
-        {
-            if (sfxSource)
-            {
-                sfxSource.clip = hangUpSfx;
-                sfxSource.Play();
-            }
-        }
-    }
+
 
     public void CallEnd()
     {
         if (sfxSource)
         {
-            sfxSource.clip = hangUpSfx;
-            sfxSource.Play();
+            sfxSource.Stop();
         }
     }
 
