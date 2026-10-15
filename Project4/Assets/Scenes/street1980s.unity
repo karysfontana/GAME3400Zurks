@@ -289,7 +289,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &155023884
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6185,6 +6185,207 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1862373221}
   m_Mesh: {fileID: 10206, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1001 &1863892239
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: -8679921383154817045, guid: f1b2f4dbe5ace45498a68e4ae3f9f58c, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: f1b2f4dbe5ace45498a68e4ae3f9f58c, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: f1b2f4dbe5ace45498a68e4ae3f9f58c, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: f1b2f4dbe5ace45498a68e4ae3f9f58c, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 110.11
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: f1b2f4dbe5ace45498a68e4ae3f9f58c, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 19.05
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: f1b2f4dbe5ace45498a68e4ae3f9f58c, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 193.97
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: f1b2f4dbe5ace45498a68e4ae3f9f58c, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.65335846
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: f1b2f4dbe5ace45498a68e4ae3f9f58c, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0.25048083
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: f1b2f4dbe5ace45498a68e4ae3f9f58c, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.25573698
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: f1b2f4dbe5ace45498a68e4ae3f9f58c, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0.6670687
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: f1b2f4dbe5ace45498a68e4ae3f9f58c, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0.795
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: f1b2f4dbe5ace45498a68e4ae3f9f58c, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 41.945
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: f1b2f4dbe5ace45498a68e4ae3f9f58c, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: -90.885
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: f1b2f4dbe5ace45498a68e4ae3f9f58c, type: 3}
+      propertyPath: m_ConstrainProportionsScale
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: f1b2f4dbe5ace45498a68e4ae3f9f58c, type: 3}
+      propertyPath: m_Name
+      value: phone_with_wire
+      objectReference: {fileID: 0}
+    - target: {fileID: 1170970068873931921, guid: f1b2f4dbe5ace45498a68e4ae3f9f58c, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: f7a00b66e2bf84594b6f4201e021c2a2, type: 2}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: f1b2f4dbe5ace45498a68e4ae3f9f58c, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1863892243}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: f1b2f4dbe5ace45498a68e4ae3f9f58c, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1863892242}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: f1b2f4dbe5ace45498a68e4ae3f9f58c, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1863892241}
+  m_SourcePrefab: {fileID: 100100000, guid: f1b2f4dbe5ace45498a68e4ae3f9f58c, type: 3}
+--- !u!1 &1863892240 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: f1b2f4dbe5ace45498a68e4ae3f9f58c, type: 3}
+  m_PrefabInstance: {fileID: 1863892239}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1863892241
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1863892240}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a48eefe6b92eeb245b6630cac36dd418, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PhoneInteraction
+  player: {fileID: 2052621410}
+  interactionDistance: 20
+  onPhonePickedUp:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 155023884}
+        m_TargetAssemblyTypeName: DialogueTrigger, Assembly-CSharp
+        m_MethodName: CallStart
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  onPhonePutDown:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1044292912}
+        m_TargetAssemblyTypeName: SceneTransitionManager, Assembly-CSharp
+        m_MethodName: TransitionToNextScene
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!64 &1863892242
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1863892240}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 5
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 3369316746193770658, guid: f1b2f4dbe5ace45498a68e4ae3f9f58c, type: 3}
+--- !u!114 &1863892243
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1863892240}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 22da19c42a28a4096b157f7c02c66e98, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::DialogueTrigger
+  dialogueLines:
+  - speaker: Caller
+    dialogueText: "Hey\u2026 you\u2026 Uh thanks for picking up..."
+  - speaker: Caller
+    dialogueText: "I\u2019m sorry\u2026 I just"
+  - speaker: Caller
+    dialogueText: "\u2026can\u2019t anymore."
+  - speaker: Caller
+    dialogueText: "I-I know it\u2019s not a good time to do this-"
+  - speaker: Caller
+    dialogueText: "Well, there\u2019s never really a good time to do this-but"
+  - speaker: Caller
+    dialogueText: You know what I mean.
+  - speaker: Caller
+    dialogueText: " I know-I know that you\u2019re grieving but please just listen to me."
+  - speaker: Caller
+    dialogueText: "I just\u2026"
+  - speaker: Caller
+    dialogueText: "I can\u2019t be the one who processes your feelings for you anymore."
+  - speaker: Caller
+    dialogueText: "No-no just\u2026"
+  - speaker: Caller
+    dialogueText: Just stop.
+  - speaker: Caller
+    dialogueText: "You always say that-that you\u2019ll change or be better but"
+  - speaker: Caller
+    dialogueText: You never follow through.
+  - speaker: Caller
+    dialogueText: "I-I just can\u2019t take another year of this-I can\u2019t."
+  - speaker: Caller
+    dialogueText: "It\u2019s over."
+  dialogueStarted: 0
 --- !u!1 &1872331427
 GameObject:
   m_ObjectHideFlags: 0
@@ -6601,7 +6802,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1ee5d8d780cae404b98ff9e09c849dc5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerPhoneInteractor
-  phone: {fileID: 198617210}
+  phone: {fileID: 1863892241}
 --- !u!114 &2052621408
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7249,3 +7450,4 @@ SceneRoots:
   - {fileID: 1708201937}
   - {fileID: 1044292913}
   - {fileID: 155023889}
+  - {fileID: 1863892239}

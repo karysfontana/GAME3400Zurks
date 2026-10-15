@@ -1783,6 +1783,8 @@ MonoBehaviour:
   nameBox: {fileID: 1732469625}
   textBox: {fileID: 1447086690}
   dialogueGameObj: {fileID: 960880210}
+  sfxSource: {fileID: 0}
+  hangUpSfx: {fileID: 0}
   typingSpeed: 0.05
   isTyping: 0
   dialogueFinished: 0
@@ -6138,6 +6140,155 @@ Transform:
   - {fileID: 353561015}
   m_Father: {fileID: 1138256059}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &1975617448
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: -8679921383154817045, guid: f1b2f4dbe5ace45498a68e4ae3f9f58c, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: f1b2f4dbe5ace45498a68e4ae3f9f58c, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: f1b2f4dbe5ace45498a68e4ae3f9f58c, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: f1b2f4dbe5ace45498a68e4ae3f9f58c, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 110.11
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: f1b2f4dbe5ace45498a68e4ae3f9f58c, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 19.05
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: f1b2f4dbe5ace45498a68e4ae3f9f58c, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 193.97
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: f1b2f4dbe5ace45498a68e4ae3f9f58c, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.65335846
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: f1b2f4dbe5ace45498a68e4ae3f9f58c, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0.25048083
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: f1b2f4dbe5ace45498a68e4ae3f9f58c, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.25573698
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: f1b2f4dbe5ace45498a68e4ae3f9f58c, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0.6670687
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: f1b2f4dbe5ace45498a68e4ae3f9f58c, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0.795
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: f1b2f4dbe5ace45498a68e4ae3f9f58c, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 41.945
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: f1b2f4dbe5ace45498a68e4ae3f9f58c, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: -90.885
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: f1b2f4dbe5ace45498a68e4ae3f9f58c, type: 3}
+      propertyPath: m_ConstrainProportionsScale
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: f1b2f4dbe5ace45498a68e4ae3f9f58c, type: 3}
+      propertyPath: m_Name
+      value: phone_with_wire
+      objectReference: {fileID: 0}
+    - target: {fileID: 1170970068873931921, guid: f1b2f4dbe5ace45498a68e4ae3f9f58c, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: f7a00b66e2bf84594b6f4201e021c2a2, type: 2}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: f1b2f4dbe5ace45498a68e4ae3f9f58c, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1975617452}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: f1b2f4dbe5ace45498a68e4ae3f9f58c, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1975617451}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: f1b2f4dbe5ace45498a68e4ae3f9f58c, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1975617450}
+  m_SourcePrefab: {fileID: 100100000, guid: f1b2f4dbe5ace45498a68e4ae3f9f58c, type: 3}
+--- !u!1 &1975617449 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: f1b2f4dbe5ace45498a68e4ae3f9f58c, type: 3}
+  m_PrefabInstance: {fileID: 1975617448}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1975617450
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1975617449}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a48eefe6b92eeb245b6630cac36dd418, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PhoneInteraction
+  player: {fileID: 0}
+  interactionDistance: 20
+  onPhonePickedUp:
+    m_PersistentCalls:
+      m_Calls: []
+  onPhonePutDown:
+    m_PersistentCalls:
+      m_Calls: []
+--- !u!64 &1975617451
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1975617449}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 5
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 3369316746193770658, guid: f1b2f4dbe5ace45498a68e4ae3f9f58c, type: 3}
+--- !u!114 &1975617452
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1975617449}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 22da19c42a28a4096b157f7c02c66e98, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::DialogueTrigger
+  dialogueLines:
+  - speaker: ' '
+    dialogueText: 'It''s still over. '
+  dialogueStarted: 0
 --- !u!1 &1987818385
 GameObject:
   m_ObjectHideFlags: 0
@@ -6943,3 +7094,4 @@ SceneRoots:
   - {fileID: 1946185773}
   - {fileID: 990752193}
   - {fileID: 1607795467}
+  - {fileID: 1975617448}
