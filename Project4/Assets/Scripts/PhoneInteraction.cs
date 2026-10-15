@@ -15,35 +15,27 @@ public class PhoneInteraction : MonoBehaviour
     public static bool isPickedUp = false;
 
     public void TryInteract()
-{
-    if (player == null)
     {
-        Debug.LogError("Player is not assigned!");
-        return;
-    }
 
-    float distance = Vector3.Distance(
-        player.position,
-        transform.position
-    );
-
-    Debug.Log("Distance to phone: " + distance);
-
-    if (isPickedUp == false)
-    {
-        if (distance <= interactionDistance)
+        float distance = Vector3.Distance(
+            player.position,
+            transform.position
+        );
+        if (isPickedUp == false)
         {
-            PickUpPhone();
+            if (distance <= interactionDistance)
+            {
+                PickUpPhone();
+            }
+        }
+        else
+        {
+            if (distance <= interactionDistance)
+            {
+                PutDownPhone(); 
+            }
         }
     }
-    else
-    {
-        if (distance <= interactionDistance)
-        {
-            PutDownPhone();
-        }
-    }
-}
 
     private void PickUpPhone()
     {
