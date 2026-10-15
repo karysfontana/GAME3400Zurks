@@ -13,6 +13,8 @@ public class DialogueManager : MonoBehaviour
     public TextMeshProUGUI nameBox; 
     public TextMeshProUGUI textBox; 
     public GameObject dialogueGameObj; 
+    public AudioSource sfxSource; 
+    public AudioClip hangUpSfx; 
 
     [Header("Text Config")]
     public float typingSpeed = 0.05f; 
@@ -59,6 +61,10 @@ public void StartDia(DialogueLine[] newLines)
     dialogueFinished = false;
     dialogueLines = newLines;
     justStarted = true;
+    if (sfxSource)
+    {
+        sfxSource.Stop(); 
+    }
 
     typingCo = StartCoroutine(TypeLine(dialogueLines[currentInd]));
 }
@@ -98,7 +104,11 @@ public void StartDia(DialogueLine[] newLines)
                         nameBox.text = ""; 
                     }
                     dialogueFinished = true; 
-                    // Would maybe call in SFX here. 
+                    if (sfxSource != null && hangUpSfx != null)
+                    {
+                        sfxSource.clip = hangUpSfx;
+                        sfxSource.Play();
+                    }
                     dialogueGameObj.SetActive(false); 
                 }
             }
