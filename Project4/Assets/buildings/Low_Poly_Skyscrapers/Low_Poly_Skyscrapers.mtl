@@ -1,0 +1,58 @@
+# MTL file - created by a modified js OBJExporter
+
+newmtl windowFrames
+Tr 0.0000
+Tf 1.0000 1.0000 1.0000
+illum 1
+Pr 0.5
+Pds 1
+Pl 1
+Ka 1 1 1
+Kd 0 0 0
+Ke 0 0 0
+
+newmtl Border
+Tr 0.0000
+Tf 1.0000 1.0000 1.0000
+illum 1
+Pr 0.5
+Pds 1
+Pl 1
+Ka 1 1 1
+Kd 0.04954899847507477 0.04954899847507477 0.04954899847507477
+Ke 0 0 0
+
+newmtl windows
+Tr 0.0000
+Tf 1.0000 1.0000 1.0000
+illum 1
+Pm 1
+Pds 1
+Pl 1
+Ka 1 1 1
+Kd 0.5785239934921265 0.7771080136299133 0.800000011920929
+Ke 0 0 0
+
+newmtl roof
+Tr 0.0000
+Tf 1.0000 1.0000 1.0000
+illum 1
+Pm 1
+Pr 1
+Pds 1
+Pl 1
+Ka 1 1 1
+Kd 0.05000000074505806 0.05000000074505806 0.05000000074505806
+Ke 0 0 0
+
+newmtl bottom
+Tr 0.0000
+Tf 1.0000 1.0000 1.0000
+illum 1
+Pm 1
+Pr 0.5629919767379761
+Pds 1
+Pl 1
+Ka 1 1 1
+Kd 0.25 0.25 0.25
+Ke 0 0 0

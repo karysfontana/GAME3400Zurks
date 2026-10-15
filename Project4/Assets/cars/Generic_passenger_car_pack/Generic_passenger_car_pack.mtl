@@ -1,0 +1,409 @@
+# MTL file - created by a modified js OBJExporter
+
+newmtl Wheel
+Tr 0.0000
+Tf 1.0000 1.0000 1.0000
+illum 1
+Pm 1
+Pr 1
+Pds 1
+Pl 1
+Ka 1 1 1
+Kd 1 1 1
+Ke 0 0 0
+map_Kd Wheel.png
+map_Pm metalnessMap1.png
+map_Pr metalnessMap1.png
+
+newmtl Body
+Tr 0.0000
+Tf 1.0000 1.0000 1.0000
+illum 1
+Pm 1
+Pr 1
+Pds 1
+Pl 1
+Ka 1 1 1
+Kd 1 1 1
+Ke 0 0 0
+map_Kd Body.png
+map_Pm metalnessMap2.png
+map_Pr metalnessMap2.png
+
+newmtl Glass
+Tr 0.42244666814804077
+Tf 1.0000 1.0000 1.0000
+illum 1
+Pds 1
+Pl 1
+Ka 1 1 1
+Kd 0 0 0
+Ke 0 0 0
+
+newmtl Optics
+Tr 0.0000
+Tf 1.0000 1.0000 1.0000
+illum 1
+Pds 1
+Pl 1
+Ka 1 1 1
+Kd 1 1 1
+Ke 0 0 0
+map_Kd Optics.png
+
+newmtl Body_0
+Tr 0.0000
+Tf 1.0000 1.0000 1.0000
+illum 1
+Pm 1
+Pr 1
+Pds 1
+Pl 1
+Ka 1 1 1
+Kd 1 1 1
+Ke 0 0 0
+map_Kd Body_0.png
+map_Pm metalnessMap5.png
+map_Pr metalnessMap5.png
+
+newmtl Glass_0
+Tr 0.22122710943222046
+Tf 1.0000 1.0000 1.0000
+illum 1
+Pds 1
+Pl 1
+Ka 1 1 1
+Kd 0 0 0
+Ke 0 0 0
+
+newmtl Optics_0
+Tr 0.0000
+Tf 1.0000 1.0000 1.0000
+illum 1
+Pds 1
+Pl 1
+Ka 1 1 1
+Kd 1 1 1
+Ke 0 0 0
+map_Kd Optics_0.png
+
+newmtl Wheel_0
+Tr 0.0000
+Tf 1.0000 1.0000 1.0000
+illum 1
+Pm 1
+Pr 1
+Pds 1
+Pl 1
+Ka 1 1 1
+Kd 1 1 1
+Ke 0 0 0
+map_Kd Wheel_0.png
+map_Pm metalnessMap8.png
+map_Pr metalnessMap8.png
+
+newmtl Body_1
+Tr 0.0000
+Tf 1.0000 1.0000 1.0000
+illum 1
+Pm 1
+Pr 1
+Pds 1
+Pl 1
+Ka 1 1 1
+Kd 1 1 1
+Ke 0 0 0
+map_Kd Body_1.png
+map_Pm metalnessMap9.png
+map_Pr metalnessMap9.png
+
+newmtl Glass_1
+Tr 0.16025149822235107
+Tf 1.0000 1.0000 1.0000
+illum 1
+Pds 1
+Pl 1
+Ka 1 1 1
+Kd 0 0 0
+Ke 0 0 0
+
+newmtl Wheek
+Tr 0.0000
+Tf 1.0000 1.0000 1.0000
+illum 1
+Pm 1
+Pr 1
+Pds 1
+Pl 1
+Ka 1 1 1
+Kd 1 1 1
+Ke 0 0 0
+map_Kd Wheek.png
+map_Pm metalnessMap11.png
+map_Pr metalnessMap11.png
+
+newmtl Wheel_1
+Tr 0.0000
+Tf 1.0000 1.0000 1.0000
+illum 1
+Pm 1
+Pr 1
+Pds 1
+Pl 1
+Ka 1 1 1
+Kd 1 1 1
+Ke 0 0 0
+map_Kd Wheel_1.png
+map_Pm metalnessMap12.png
+map_Pr metalnessMap12.png
+
+newmtl Body_2
+Tr 0.0000
+Tf 1.0000 1.0000 1.0000
+illum 1
+Pm 1
+Pr 1
+Pds 1
+Pl 1
+Ka 1 1 1
+Kd 1 1 1
+Ke 0 0 0
+map_Kd Body_2.png
+map_Pm metalnessMap13.png
+map_Pr metalnessMap13.png
+
+newmtl Glass_2
+Tr 0.1419588327407837
+Tf 1.0000 1.0000 1.0000
+illum 1
+Pds 1
+Pl 1
+Ka 1 1 1
+Kd 0 0 0
+Ke 0 0 0
+
+newmtl Wheel_2
+Tr 0.0000
+Tf 1.0000 1.0000 1.0000
+illum 1
+Pm 1
+Pr 1
+Pds 1
+Pl 1
+Ka 1 1 1
+Kd 1 1 1
+Ke 0 0 0
+map_Kd Wheel_2.png
+map_Pm metalnessMap15.png
+map_Pr metalnessMap15.png
+
+newmtl Body_3
+Tr 0.0000
+Tf 1.0000 1.0000 1.0000
+illum 1
+Pm 1
+Pr 1
+Pds 1
+Pl 1
+Ka 1 1 1
+Kd 1 1 1
+Ke 0 0 0
+map_Kd Body_3.png
+map_Pm metalnessMap16.png
+map_Pr metalnessMap16.png
+
+newmtl Glass_3
+Tr 0.32488566637039185
+Tf 1.0000 1.0000 1.0000
+illum 1
+Pds 1
+Pl 1
+Ka 1 1 1
+Kd 0 0 0
+Ke 0 0 0
+
+newmtl Wheel_3
+Tr 0.0000
+Tf 1.0000 1.0000 1.0000
+illum 1
+Pm 1
+Pr 1
+Pds 1
+Pl 1
+Ka 1 1 1
+Kd 1 1 1
+Ke 0 0 0
+map_Kd Wheel_3.png
+map_Pm metalnessMap18.png
+map_Pr metalnessMap18.png
+
+newmtl Body_4
+Tr 0.0000
+Tf 1.0000 1.0000 1.0000
+illum 1
+Pm 1
+Pr 1
+Pds 1
+Pl 1
+Ka 1 1 1
+Kd 1 1 1
+Ke 0 0 0
+map_Kd Body_4.png
+map_Pm metalnessMap19.png
+map_Pr metalnessMap19.png
+
+newmtl Glass_4
+Tr 0.1541539430618286
+Tf 1.0000 1.0000 1.0000
+illum 1
+Pds 1
+Pl 1
+Ka 1 1 1
+Kd 0 0 0
+Ke 0 0 0
+
+newmtl Body_5
+Tr 0.0000
+Tf 1.0000 1.0000 1.0000
+illum 1
+Pm 1
+Pr 1
+Pds 1
+Pl 1
+Ka 1 1 1
+Kd 1 1 1
+Ke 0 0 0
+map_Kd Body_5.png
+map_Pm metalnessMap21.png
+map_Pr metalnessMap21.png
+
+newmtl Glass_5
+Tr 0.3187881112098694
+Tf 1.0000 1.0000 1.0000
+illum 1
+Pds 1
+Pl 1
+Ka 1 1 1
+Kd 0 0 0
+Ke 0 0 0
+
+newmtl Wheel_4
+Tr 0.0000
+Tf 1.0000 1.0000 1.0000
+illum 1
+Pm 1
+Pr 1
+Pds 1
+Pl 1
+Ka 1 1 1
+Kd 1 1 1
+Ke 0 0 0
+map_Kd Wheel_4.png
+map_Pm metalnessMap23.png
+map_Pr metalnessMap23.png
+
+newmtl Wheel_5
+Tr 0.0000
+Tf 1.0000 1.0000 1.0000
+illum 1
+Pm 1
+Pr 1
+Pds 1
+Pl 1
+Ka 1 1 1
+Kd 1 1 1
+Ke 0 0 0
+map_Kd Wheel_5.png
+map_Pm metalnessMap24.png
+map_Pr metalnessMap24.png
+
+newmtl Body_6
+Tr 0.0000
+Tf 1.0000 1.0000 1.0000
+illum 1
+Pm 1
+Pr 1
+Pds 1
+Pl 1
+Ka 1 1 1
+Kd 1 1 1
+Ke 0 0 0
+map_Kd Body_6.png
+map_Pm metalnessMap25.png
+map_Pr metalnessMap25.png
+
+newmtl Glass_6
+Tr 0.6236661672592163
+Tf 1.0000 1.0000 1.0000
+illum 1
+Pds 1
+Pl 1
+Ka 1 1 1
+Kd 0 0 0
+Ke 0 0 0
+
+newmtl Body_7
+Tr 0.0000
+Tf 1.0000 1.0000 1.0000
+illum 1
+Pm 1
+Pr 1
+Pds 1
+Pl 1
+Ka 1 1 1
+Kd 1 1 1
+Ke 0 0 0
+map_Kd Body_7.png
+map_Pm metalnessMap27.png
+map_Pr metalnessMap27.png
+
+newmtl Glass_7
+Tr 0.29439789056777954
+Tf 1.0000 1.0000 1.0000
+illum 1
+Pds 1
+Pl 1
+Ka 1 1 1
+Kd 0 0 0
+Ke 0 0 0
+
+newmtl Body_8
+Tr 0.0000
+Tf 1.0000 1.0000 1.0000
+illum 1
+Pm 1
+Pr 1
+Pds 1
+Pl 1
+Ka 1 1 1
+Kd 1 1 1
+Ke 0 0 0
+map_Kd Body_8.png
+map_Pm metalnessMap29.png
+map_Pr metalnessMap29.png
+
+newmtl Glass_8
+Tr 0.3553735017776489
+Tf 1.0000 1.0000 1.0000
+illum 1
+Pds 1
+Pl 1
+Ka 1 1 1
+Kd 0 0 0
+Ke 0 0 0
+
+newmtl Cylinder001__0
+Tr 0.0000
+Tf 1.0000 1.0000 1.0000
+illum 1
+Pm 1
+Pr 1
+Pds 1
+Pl 1
+Ka 1 1 1
+Kd 1 1 1
+Ke 0 0 0
+map_Kd Cylinder001__0.png
+map_Pm metalnessMap31.png
+map_Pr metalnessMap31.png
+map_Ka ambientMap31.png
