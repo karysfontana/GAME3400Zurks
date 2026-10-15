@@ -2,40 +2,42 @@ using UnityEngine;
 
 public class DialogueTrigger : MonoBehaviour
 {
-    public DialogueLine[] dialogueLines; 
+    public DialogueLine[] dialogueLines;
 
-    public bool dialogueStarted = false; 
-    private bool playerInit = false; 
+    public bool dialogueStarted = false;
+    private bool playerInit = false;
+
+    private bool hasPlayed = false;
 
     public void CallStart()
     {
-        OnPlayerInit(); 
-        // hoping this works lol 
-        if (playerInit == true && dialogueStarted == false)
+        if (hasPlayed)
         {
-            DialogueManager.instance.StartDia(dialogueLines);
-            dialogueStarted = true; 
+            return;
         }
 
-        if (dialogueStarted && DialogueManager.instance.dialogueFinished == true)
+        if (PhoneInteraction.isPickedUp)
         {
-            dialogueStarted = false; 
+            hasPlayed = true;
+            dialogueStarted = true;
+
+            DialogueManager.instance.StartDia(dialogueLines);
         }
     }
 
     public void OnPlayerInit()
     {
-        if (PhoneInteraction.isPickedUp == true)
+        if (PhoneInteraction.isPickedUp)
         {
-            playerInit = true; 
+            playerInit = true;
         }
     }
 
     private void OnPlayerDown()
     {
-        if (PhoneInteraction.isPickedUp == false)
+        if (!PhoneInteraction.isPickedUp)
         {
-            playerInit = false; 
+            playerInit = false;
         }
     }
 }

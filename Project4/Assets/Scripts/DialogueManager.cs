@@ -43,16 +43,25 @@ public class DialogueManager : MonoBehaviour
     /** 
         Function to start up dialogue. Must be public bc it will be called from another script. 
     **/ 
-    public void StartDia(DialogueLine[] newLines)
+
+public void StartDia(DialogueLine[] newLines)
+{
+    if (newLines == null || newLines.Length == 0)
     {
-        // Must activate obj bc it starts as inactive
-        dialogueGameObj.SetActive(true); 
-        dialogueFinished = false; 
-        dialogueLines = newLines; 
-        justStarted = true; 
-        typingCo = StartCoroutine(TypeLine(dialogueLines[currentInd]));
+        Debug.LogWarning("No dialogue lines assigned!");
+        return;
     }
 
+    currentInd = 0;
+    isTyping = false;
+
+    dialogueGameObj.SetActive(true);
+    dialogueFinished = false;
+    dialogueLines = newLines;
+    justStarted = true;
+
+    typingCo = StartCoroutine(TypeLine(dialogueLines[currentInd]));
+}
     // Update is called once per frame
     void Update()
     {
