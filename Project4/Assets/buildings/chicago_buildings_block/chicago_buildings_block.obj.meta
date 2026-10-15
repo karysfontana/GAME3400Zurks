@@ -3,7 +3,27 @@ guid: 65d554c2254d14a3d8efe284f84ebcf1
 ModelImporter:
   serializedVersion: 24600
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: BLACK_BUILD
+    second: {fileID: 2100000, guid: e594c7330254b44388e2b7a79457bbae, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Bricks
+    second: {fileID: 2100000, guid: 23f4c8b8658ec4cadb3dd8f50f516a0a, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Building
+    second: {fileID: 2100000, guid: c95a2241bab5343dfa02148817e28fd9, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Bulbs
+    second: {fileID: 2100000, guid: da9ac3e67ad1a453eab8f8ce2e131294, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
