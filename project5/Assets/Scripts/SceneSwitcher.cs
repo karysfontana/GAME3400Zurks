@@ -4,7 +4,7 @@ using UnityEngine.SceneManagement;
 
 public class SceneSwitcher : MonoBehaviour
 {
-    [SerializeField] private string targetScene = "WasherDrum";
+    [SerializeField] private string targetScene = "Barrel";
 
     public void SwitchScene()
     {
