@@ -2163,6 +2163,7 @@ GameObject:
   - component: {fileID: 1911348827}
   - component: {fileID: 1911348826}
   - component: {fileID: 1911348825}
+  - component: {fileID: 1911348832}
   m_Layer: 0
   m_Name: PlayerCapsule
   m_TagString: Untagged
@@ -2243,6 +2244,22 @@ MonoBehaviour:
         m_CallState: 2
     m_ActionId: 77dee132-de3e-4e59-b9a2-6ff7b468b90c
     m_ActionName: 'Movement/Look[/Mouse/delta]'
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1911348832}
+        m_TargetAssemblyTypeName: PlayerInteraction, Assembly-CSharp
+        m_MethodName: Interact
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: 84aa90e3-2d7d-4424-ac45-75f243c1b88f
+    m_ActionName: 'Movement/Interact[/Keyboard/e]'
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: 
   m_DefaultActionMap: Movement
@@ -2387,6 +2404,20 @@ Transform:
   - {fileID: 1667052276}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1911348832
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1911348824}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5b4c217e507cf26418db319d34dcc54e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PlayerInteraction
+  playerCamera: {fileID: 1667052275}
+  interactDistance: 3
 --- !u!1 &2081819057
 GameObject:
   m_ObjectHideFlags: 0
