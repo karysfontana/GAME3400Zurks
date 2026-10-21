@@ -1375,12 +1375,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1070671937}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -9.82, y: 2.89, z: 7.25}
   m_LocalScale: {x: 0.5, y: 1, z: 0.5}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 1743676423}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1085343690
 GameObject:
@@ -1640,7 +1640,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 23f140bc291eb47cf81e42eeda234a87, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerController
-  speed: 2
+  speed: 3
   jumpHeight: 2
   gravity: -9.8
   cameraTransform: {fileID: 492646307}
@@ -1735,9 +1735,9 @@ Transform:
   m_GameObject: {fileID: 1323037125}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -7.06, y: 1.81, z: -0.27}
-  m_LocalScale: {x: 2, y: 2, z: 2}
-  m_ConstrainProportionsScale: 1
+  m_LocalPosition: {x: -7.06, y: 2.23, z: -0.27}
+  m_LocalScale: {x: 2, y: 2.5, z: 2}
+  m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 492646307}
   m_Father: {fileID: 0}
@@ -1815,6 +1815,10 @@ MonoBehaviour:
         m_CallState: 2
     m_ActionId: 77dee132-de3e-4e59-b9a2-6ff7b468b90c
     m_ActionName: 'Movement/Look[/Mouse/delta]'
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 84aa90e3-2d7d-4424-ac45-75f243c1b88f
+    m_ActionName: 'Movement/Interact[/Keyboard/e]'
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: 
   m_DefaultActionMap: Movement
@@ -2331,6 +2335,7 @@ Transform:
   - {fileID: 479901038}
   - {fileID: 833773478}
   - {fileID: 635352850}
+  - {fileID: 1070671941}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1808371886
@@ -2733,4 +2738,3 @@ SceneRoots:
   - {fileID: 1743676423}
   - {fileID: 2074545199}
   - {fileID: 1323037130}
-  - {fileID: 1070671941}
