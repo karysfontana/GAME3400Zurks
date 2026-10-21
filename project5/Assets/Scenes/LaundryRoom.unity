@@ -1621,6 +1621,7 @@ GameObject:
   - component: {fileID: 1323037126}
   - component: {fileID: 1323037131}
   - component: {fileID: 1323037132}
+  - component: {fileID: 1323037133}
   m_Layer: 0
   m_Name: PlayerCapsule
   m_TagString: Untagged
@@ -1816,7 +1817,19 @@ MonoBehaviour:
     m_ActionId: 77dee132-de3e-4e59-b9a2-6ff7b468b90c
     m_ActionName: 'Movement/Look[/Mouse/delta]'
   - m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1323037133}
+        m_TargetAssemblyTypeName: PlayerInteraction, Assembly-CSharp
+        m_MethodName: Interact
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_ActionId: 84aa90e3-2d7d-4424-ac45-75f243c1b88f
     m_ActionName: 'Movement/Interact[/Keyboard/e]'
   m_NeverAutoSwitchControlSchemes: 0
@@ -1849,6 +1862,20 @@ CharacterController:
   m_SkinWidth: 0.08
   m_MinMoveDistance: 0.001
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &1323037133
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1323037125}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5b4c217e507cf26418db319d34dcc54e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PlayerInteraction
+  playerCamera: {fileID: 492646306}
+  interactDistance: 3
 --- !u!1 &1449808202
 GameObject:
   m_ObjectHideFlags: 0
@@ -1973,6 +2000,7 @@ GameObject:
   - component: {fileID: 1550709360}
   - component: {fileID: 1550709359}
   - component: {fileID: 1550709358}
+  - component: {fileID: 1550709362}
   m_Layer: 0
   m_Name: Washer (1)
   m_TagString: Untagged
@@ -2073,6 +2101,19 @@ Transform:
   m_Children: []
   m_Father: {fileID: 2074545199}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1550709362
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1550709357}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5d8dbdfad09edea42b0c0036f43502b8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::SceneSwitcher
+  targetScene: WasherDrum
 --- !u!1 &1572474546
 GameObject:
   m_ObjectHideFlags: 0

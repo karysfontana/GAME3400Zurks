@@ -1,3 +1,4 @@
+
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -19,7 +20,14 @@ public class PlayerInteraction : MonoBehaviour
             out hit,
             interactDistance))
         {
-            Debug.Log("Interacted with: " + hit.collider.name);
+            SceneSwitcher switcher =
+                hit.collider.GetComponentInParent<SceneSwitcher>();
+
+            if (switcher != null)
+            {
+                switcher.SwitchScene();
+            }
         }
     }
 }
+
