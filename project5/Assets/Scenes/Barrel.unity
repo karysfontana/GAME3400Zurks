@@ -474,7 +474,7 @@ MonoBehaviour:
   jumpHeight: 1
   gravity: -9.8
   cameraTransform: {fileID: 1335152617}
-  mouseSensitivity: 30
+  mouseSensitivity: 15
   lookLimit: 80
 --- !u!136 &455744172
 CapsuleCollider:
@@ -564,14 +564,14 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 455744167}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: 0.7394253, z: -0, w: -0.6732387}
-  m_LocalPosition: {x: -14.260815, y: 1.66, z: -10.5401325}
+  m_LocalRotation: {x: -0, y: -0.7535808, z: -0, w: -0.6573553}
+  m_LocalPosition: {x: -14.464146, y: 1.66, z: -10.75639}
   m_LocalScale: {x: 1.25, y: 1.25, z: 1.25}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1335152617}
   m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 264.635, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 457.803, z: 0}
 --- !u!1001 &786240767
 PrefabInstance:
   m_ObjectHideFlags: 0

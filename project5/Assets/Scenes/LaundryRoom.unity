@@ -3665,7 +3665,7 @@ MonoBehaviour:
   jumpHeight: 2
   gravity: -9.8
   cameraTransform: {fileID: 492646307}
-  mouseSensitivity: 30
+  mouseSensitivity: 15
   lookLimit: 80
 --- !u!136 &1323037127
 CapsuleCollider:
