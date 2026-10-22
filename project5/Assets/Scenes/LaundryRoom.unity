@@ -794,7 +794,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 133193b5247ad4371aebf12c6f19fc7f, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 9.21
+      value: 9.59
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 133193b5247ad4371aebf12c6f19fc7f, type: 3}
       propertyPath: m_LocalPosition.z
@@ -972,7 +972,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 133193b5247ad4371aebf12c6f19fc7f, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 9.21
+      value: 9.59
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 133193b5247ad4371aebf12c6f19fc7f, type: 3}
       propertyPath: m_LocalPosition.z
@@ -1262,7 +1262,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 133193b5247ad4371aebf12c6f19fc7f, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 9.21
+      value: 9.59
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 133193b5247ad4371aebf12c6f19fc7f, type: 3}
       propertyPath: m_LocalPosition.z
@@ -2320,7 +2320,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 133193b5247ad4371aebf12c6f19fc7f, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 9.21
+      value: 9.59
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 133193b5247ad4371aebf12c6f19fc7f, type: 3}
       propertyPath: m_LocalPosition.z
@@ -3138,7 +3138,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 133193b5247ad4371aebf12c6f19fc7f, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 9.21
+      value: 9.59
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 133193b5247ad4371aebf12c6f19fc7f, type: 3}
       propertyPath: m_LocalPosition.z
@@ -3316,7 +3316,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 133193b5247ad4371aebf12c6f19fc7f, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 9.21
+      value: 9.59
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 133193b5247ad4371aebf12c6f19fc7f, type: 3}
       propertyPath: m_LocalPosition.z
@@ -3825,11 +3825,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 23f140bc291eb47cf81e42eeda234a87, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerController
-  speed: 3
+  speed: 3.5
   jumpHeight: 2
   gravity: -9.8
   cameraTransform: {fileID: 492646307}
-  mouseSensitivity: 15
+  mouseSensitivity: 10
   lookLimit: 80
 --- !u!136 &1323037127
 CapsuleCollider:
