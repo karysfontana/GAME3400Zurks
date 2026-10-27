@@ -1,0 +1,53 @@
+{
+  "Poster_01_Riot": {
+    "paper_m": [
+      0.5,
+      0.65,
+      0.0008
+    ],
+    "artwork_m": [
+      0.5,
+      0.5
+    ],
+    "original_pixels": [
+      500,
+      500
+    ],
+    "triangles": 16,
+    "source_sha256": "8c9a68c823c169fae608075e30fa0c4389a766a1070f47f20e392f19c0dcaad8"
+  },
+  "Poster_02_Seventeen": {
+    "paper_m": [
+      0.5,
+      0.65,
+      0.0008
+    ],
+    "artwork_m": [
+      0.4887795275590551,
+      0.65
+    ],
+    "original_pixels": [
+      573,
+      762
+    ],
+    "triangles": 16,
+    "source_sha256": "8bb841212340d4ccb809abd734ccf0ac11e20b81c36fecd5513bb0b5d1b561dd"
+  },
+  "Poster_03_PrettyLittleLiars": {
+    "paper_m": [
+      0.5,
+      0.65,
+      0.0008
+    ],
+    "artwork_m": [
+      0.48750000000000004,
+      0.65
+    ],
+    "original_pixels": [
+      1200,
+      1600
+    ],
+    "triangles": 16,
+    "source_sha256": "3367db18385b0e038f1d545d41de1fce6badc42bd7684803283ee3144d43add7"
+  }
+}
