@@ -1,0 +1,12 @@
+newmtl Poster_01_Riot_Print
+Kd 1 1 1
+Ks 0 0 0
+d 1
+illum 2
+map_Kd Textures/Poster_01_Riot_BaseColor.jpg
+
+newmtl Paper_White
+Kd 0.97 0.96 0.94
+Ks 0 0 0
+d 1
+illum 2

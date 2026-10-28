@@ -1,0 +1,36 @@
+{
+  "Medication_Box_Horizontal": {
+    "objects": 6,
+    "triangles": 192,
+    "vertices": 150,
+    "bounds_m": [
+      [
+        -0.0575,
+        0.0,
+        -0.015
+      ],
+      [
+        0.0575,
+        0.065,
+        0.015
+      ]
+    ]
+  },
+  "Medication_Bottle": {
+    "objects": 4,
+    "triangles": 5952,
+    "vertices": 3100,
+    "bounds_m": [
+      [
+        -0.02295,
+        0.0,
+        -0.02295
+      ],
+      [
+        0.02295,
+        0.092,
+        0.02295
+      ]
+    ]
+  }
+}

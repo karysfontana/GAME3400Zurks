@@ -1,0 +1,35 @@
+newmtl BlushFabric
+Ka 0.15 0.15 0.15
+Kd 1 1 1
+Ks 0.06 0.06 0.06
+Ns 20
+d 1
+illum 2
+map_Kd Textures/BlushFabric_BaseColor.png
+
+newmtl IvoryFabric
+Ka 0.15 0.15 0.15
+Kd 1 1 1
+Ks 0.06 0.06 0.06
+Ns 20
+d 1
+illum 2
+map_Kd Textures/IvoryFabric_BaseColor.png
+
+newmtl WarmWood
+Ka 0.15 0.15 0.15
+Kd 1 1 1
+Ks 0.06 0.06 0.06
+Ns 20
+d 1
+illum 2
+map_Kd Textures/WarmWood_BaseColor.png
+
+newmtl BlushQuilt
+Ka 0.15 0.15 0.15
+Kd 1 1 1
+Ks 0.06 0.06 0.06
+Ns 20
+d 1
+illum 2
+map_Kd Textures/BlushQuilt_BaseColor.png
