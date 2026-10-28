@@ -3,7 +3,17 @@ guid: 50f5d84e6eae43145a8045b0849a5e7a
 ModelImporter:
   serializedVersion: 24600
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Carton_Print
+    second: {fileID: 2100000, guid: 6b9d4a4c382b24626a6f6888ca6a21ca, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Carton_Side
+    second: {fileID: 2100000, guid: 45b449578fe684c7e91bd453730cfdc4, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
