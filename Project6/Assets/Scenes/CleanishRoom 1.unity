@@ -2799,7 +2799,7 @@ MonoBehaviour:
     onInteract:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 1689536887}
+        - m_Target: {fileID: 1689536889}
           m_TargetAssemblyTypeName: BedSceneTransition, Assembly-CSharp
           m_MethodName: GoToNextScene
           m_Mode: 1
@@ -3065,16 +3065,13 @@ PrefabInstance:
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: a7cefe4bf4a4bba4abe315eb15ff505a, type: 3}
       insertIndex: -1
+      addedObject: {fileID: 1689536889}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: a7cefe4bf4a4bba4abe315eb15ff505a, type: 3}
+      insertIndex: -1
       addedObject: {fileID: 1689536885}
-<<<<<<< Updated upstream
     - targetCorrespondingSourceObject: {fileID: 8164078558771037576, guid: a7cefe4bf4a4bba4abe315eb15ff505a, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1689536888}
-=======
-    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: a7cefe4bf4a4bba4abe315eb15ff505a, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1689536887}
->>>>>>> Stashed changes
   m_SourcePrefab: {fileID: 100100000, guid: a7cefe4bf4a4bba4abe315eb15ff505a, type: 3}
 --- !u!1 &1689536884 stripped
 GameObject:
@@ -3107,7 +3104,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: a7cefe4bf4a4bba4abe315eb15ff505a, type: 3}
   m_PrefabInstance: {fileID: 1689536883}
   m_PrefabAsset: {fileID: 0}
-<<<<<<< Updated upstream
 --- !u!1 &1689536887 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 8164078558771037576, guid: a7cefe4bf4a4bba4abe315eb15ff505a, type: 3}
@@ -3115,15 +3111,10 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
 --- !u!64 &1689536888
 MeshCollider:
-=======
---- !u!114 &1689536887
-MonoBehaviour:
->>>>>>> Stashed changes
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-<<<<<<< Updated upstream
   m_GameObject: {fileID: 1689536887}
   m_Material: {fileID: 0}
   m_IncludeLayers:
@@ -3140,15 +3131,6 @@ MonoBehaviour:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: -2432090755550338912, guid: a7cefe4bf4a4bba4abe315eb15ff505a, type: 3}
-=======
-  m_GameObject: {fileID: 1689536884}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 78edf14ce560b384a877d66b41000cf3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::BedSceneTransition
-  nextSceneName: GettingCreepyRoom
->>>>>>> Stashed changes
 --- !u!1001 &1752111578
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3690,3 +3672,16 @@ SceneRoots:
   - {fileID: 724135837}
   - {fileID: 74504882}
   - {fileID: 34243003}
+--- !u!114 &1689536889
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1689536884}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 78edf14ce560b384a877d66b41000cf3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::BedSceneTransition
+  nextSceneName: GettingCreepyRoom
