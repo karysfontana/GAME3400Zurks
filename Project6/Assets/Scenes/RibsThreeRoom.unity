@@ -413,6 +413,37 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: -4121606559162394652, guid: c2551120c7deff947b9e04c0f3e09fc5, type: 3}
+--- !u!1 &80747063
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 80747064}
+  m_Layer: 0
+  m_Name: Ribs_FocusPoint (1)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &80747064
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 80747063}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0.027617084, y: 0.6979316, z: 0.028295346, w: -0.71507215}
+  m_LocalPosition: {x: 2.904, y: 0.405, z: 0.725}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 180, y: 91.39, z: -184.532}
 --- !u!64 &108469554
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -1246,6 +1277,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 335298223}
+  - component: {fileID: 335298224}
   m_Layer: 0
   m_Name: Ribs (1)
   m_TagString: Untagged
@@ -1275,6 +1307,27 @@ Transform:
   - {fileID: 1264377923}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
+--- !u!65 &335298224
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 335298222}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1, y: 1, z: 4.4481745}
+  m_Center: {x: 0, y: 0, z: 1.7240875}
 --- !u!1 &362363368
 GameObject:
   m_ObjectHideFlags: 0
@@ -2044,6 +2097,37 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 704504182}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &707387618
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 707387619}
+  m_Layer: 0
+  m_Name: Ribs_FocusPoint
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &707387619
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 707387618}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: 0.715633, z: -0, w: 0.6984766}
+  m_LocalPosition: {x: -3.208, y: 0.40676, z: 0.849}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 91.39, z: 0}
 --- !u!1001 &713081947
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2204,6 +2288,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 731387851}
+  - component: {fileID: 731387852}
   m_Layer: 0
   m_Name: Ribs
   m_TagString: Untagged
@@ -2233,6 +2318,27 @@ Transform:
   - {fileID: 1994057342}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &731387852
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 731387850}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.82782984, y: 0.8308969, z: 4.4772353}
+  m_Center: {x: 0.08608526, y: -0.08455189, z: 1.7386149}
 --- !u!1001 &733272835
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6476,24 +6582,19 @@ MonoBehaviour:
             m_BoolArgument: 0
           m_CallState: 2
   - displayName: Observe Medicine
-    target: {fileID: 0}
+    target: {fileID: 335298223}
     eventOnly: 0
-    focusPoint: {fileID: 1191732558}
+    focusPoint: {fileID: 80747064}
     onInteract:
       m_PersistentCalls:
-        m_Calls:
-        - m_Target: {fileID: 192550122}
-          m_TargetAssemblyTypeName: RoomProgression, Assembly-CSharp
-          m_MethodName: NextStage
-          m_Mode: 1
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 
-            m_BoolArgument: 0
-          m_CallState: 2
+        m_Calls: []
+  - displayName: Observe Medicine
+    target: {fileID: 731387851}
+    eventOnly: 0
+    focusPoint: {fileID: 707387619}
+    onInteract:
+      m_PersistentCalls:
+        m_Calls: []
   controlsToPause:
   - {fileID: 1658349714}
   transitionDuration: 0.35
@@ -8269,3 +8370,5 @@ SceneRoots:
   - {fileID: 1817144911}
   - {fileID: 1506154336}
   - {fileID: 1397440706}
+  - {fileID: 707387619}
+  - {fileID: 80747064}
