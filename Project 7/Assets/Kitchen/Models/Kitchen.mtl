@@ -1,0 +1,31 @@
+newmtl Oak
+Kd 1 1 1
+map_Kd ../Textures/Oak.png
+
+newmtl Ivory
+Kd 1 1 1
+map_Kd ../Textures/Ivory.png
+
+newmtl Enamel
+Kd 1 1 1
+map_Kd ../Textures/Enamel.png
+
+newmtl Steel
+Kd 1 1 1
+map_Kd ../Textures/Steel.png
+
+newmtl Dark
+Kd 1 1 1
+map_Kd ../Textures/Dark.png
+
+newmtl Rubber
+Kd 1 1 1
+map_Kd ../Textures/Rubber.png
+
+newmtl Glass
+Kd 1 1 1
+map_Kd ../Textures/Glass.png
+
+newmtl Interior
+Kd 1 1 1
+map_Kd ../Textures/Interior.png
