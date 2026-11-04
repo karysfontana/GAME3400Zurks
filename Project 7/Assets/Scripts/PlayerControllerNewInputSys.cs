@@ -31,6 +31,7 @@ public class PlayerControllerNewInputSys : MonoBehaviour
     Vector3 velocity; 
     CharacterController controller;
     float verticalRotation = 0f;  
+
     
     void Start()
     {
@@ -90,6 +91,7 @@ public class PlayerControllerNewInputSys : MonoBehaviour
         // Jump
         velocity.y += gravity * Time.deltaTime; 
         controller.Move(velocity * Time.deltaTime); 
+
 
         // If not FPS, add in camera movement logic tho it would probs be best to put 
         // that in its own camera script. 

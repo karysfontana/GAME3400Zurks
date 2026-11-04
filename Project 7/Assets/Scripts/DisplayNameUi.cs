@@ -15,7 +15,7 @@ public class DisplayNameUi : MonoBehaviour
     [SerializeField] private TMP_Text inspectionTutText; 
 
     [SerializeField] private LayerMask interactableLayer; 
-    [SerializeField] private float maxDistance = 10f;
+    [SerializeField] private float maxDistance = 3.5f;
 
     // Update is called once per frame
     void Update()
