@@ -1894,12 +1894,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::InspectionMech
   inspectionPoint: {fileID: 95828551}
-  inspectionUIScript: {fileID: 0}
   maxDistance: 3
   interactableLayer:
     serializedVersion: 2
     m_Bits: 8
-  rotationSpeed: 4
+  rotationSpeed: 25
+  inspectionSound: {fileID: 1650329644}
   playerInput: {fileID: 1753699943}
   gameplayMapName: Main Controls
   inspectionMapName: Inspection

@@ -7,6 +7,7 @@ public class InspectionMech : MonoBehaviour
     [SerializeField] private float maxDistance = 3.5f;
     public LayerMask interactableLayer;
     public float rotationSpeed = 10f; 
+    public AudioSource inspectionSound;
 
     [Header("Input References")]
     public PlayerInput playerInput; 
@@ -72,6 +73,11 @@ public class InspectionMech : MonoBehaviour
     private void StartInspection(GameObject obj)
     {
         inspectedObject = obj; 
+
+        if (inspectionSound != null)
+        {
+        inspectionSound.Play();
+        }
 
         // save original states
         originalParent = inspectedObject.transform.parent;
