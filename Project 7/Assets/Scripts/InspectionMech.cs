@@ -4,7 +4,6 @@ using UnityEngine.InputSystem;
 public class InspectionMech : MonoBehaviour
 {
     [SerializeField] private Transform inspectionPoint; 
-    [SerializeField] private DisplayNameUi inspectionUIScript;
     [SerializeField] private float maxDistance = 3.5f;
     public LayerMask interactableLayer;
     public float rotationSpeed = 10f; 
