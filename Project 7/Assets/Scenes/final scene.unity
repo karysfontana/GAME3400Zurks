@@ -1003,6 +1003,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Counter_Sink
       objectReference: {fileID: 0}
+    - target: {fileID: 1151388028547126963, guid: 6077f3232fd213346b17e85f2400ad68, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.111
+      objectReference: {fileID: 0}
+    - target: {fileID: 1151388028547126963, guid: 6077f3232fd213346b17e85f2400ad68, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.049
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1040,8 +1048,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Size: {x: 1.4516839, y: 0.8748811, z: 0.7009244}
+  m_Center: {x: -0.0054274746, y: 0.558839, z: -0.14953867}
 --- !u!1 &385893616
 GameObject:
   m_ObjectHideFlags: 0
@@ -2145,8 +2153,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Size: {x: 0.6255685, y: 1.6249686, z: 0.6785356}
+  m_Center: {x: 0.008328732, y: 0.7200938, z: -1.7429271}
 --- !u!1 &584974111
 GameObject:
   m_ObjectHideFlags: 0
@@ -3497,8 +3505,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Size: {x: 0.66249746, y: 0.70815825, z: 0.56250834}
+  m_Center: {x: 0.0068983887, y: 0.3565536, z: 0.003459237}
 --- !u!1 &1080610179
 GameObject:
   m_ObjectHideFlags: 0
@@ -5256,8 +5264,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Size: {x: 0.71702594, y: 0.93951976, z: 0.62221706}
+  m_Center: {x: 0.04163071, y: 0.47097296, z: -0.026728118}
 --- !u!1 &1629593696
 GameObject:
   m_ObjectHideFlags: 0
