@@ -56,11 +56,14 @@ public class PlayerControllerNewInputSys : MonoBehaviour
 
     public void Jump(InputAction.CallbackContext context)
     {
-        if (context.performed && controller.isGrounded)
+        if (DialogueManager.instance.dialogueFinished == true)
         {
-            Debug.Log($"Should jump"); 
-            velocity.y = Mathf.Sqrt(jumpHeight * -2f * gravity); 
-        }
+            if (context.performed && controller.isGrounded)
+            {
+                Debug.Log($"Should jump"); 
+                velocity.y = Mathf.Sqrt(jumpHeight * -2f * gravity); 
+            }
+        }    
     }
 
     // For first person perspective 
