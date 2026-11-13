@@ -12,7 +12,6 @@ public class SceneTransitionManager : MonoBehaviour
 
     private bool isTransitioning = false;
 
-    // Called when dialogue finishes or another event occurs
     public void TransitionToNextScene()
     {
         if (isTransitioning)
