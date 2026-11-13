@@ -2,7 +2,6 @@ using System;
 using UnityEngine;
 using UnityEngine.Events;
 
-// Attach to an always-active RoomManager, outside all stage roots.
 public class RoomProgression : MonoBehaviour
 {
     [Serializable]
@@ -14,44 +13,65 @@ public class RoomProgression : MonoBehaviour
     }
 
     public RoomStage[] stages = new RoomStage[0];
-    [Min(0)] public int startingStage = 0;
+
+    [Min(0)]
+    public int startingStage = 0;
+
     public int CurrentStage { get; private set; }
+
     private bool initialized;
     private bool applying;
 
-    private void Start() { Initialize(); }
+    private void Start()
+    {
+        Initialize();
+    }
 
     private bool Initialize()
     {
-        if (initialized) return true;
+        if (initialized)
+        {
+            return true;
+        }
+
         if (stages == null || stages.Length == 0)
         {
             Debug.LogWarning("RoomProgression: add room stages in the Inspector.", this);
             return false;
         }
+
         for (int i = 0; i < stages.Length; i++)
         {
-            if (stages[i] == null || stages[i].objects == null)
+            RoomStage stage = stages[i];
+
+            if (stage == null || stage.objects == null)
             {
                 Debug.LogError("RoomProgression: assign Objects for stage " + i, this);
                 return false;
             }
-            Transform root = stages[i].objects.transform;
-            if (transform == root || transform.IsChildOf(root))
+
+            Transform stageRoot = stage.objects.transform;
+
+            if (transform == stageRoot || transform.IsChildOf(stageRoot))
             {
                 Debug.LogError("RoomManager must be outside stage objects.", this);
                 return false;
             }
+
             for (int j = 0; j < i; j++)
             {
-                Transform other = stages[j].objects.transform;
-                if (root == other || root.IsChildOf(other) || other.IsChildOf(root))
+                Transform otherRoot = stages[j].objects.transform;
+
+                if (stageRoot == otherRoot ||
+                    stageRoot.IsChildOf(otherRoot) ||
+                    otherRoot.IsChildOf(stageRoot))
                 {
                     Debug.LogError("Stage roots must be separate, non-nested objects.", this);
                     return false;
                 }
             }
         }
+
         CurrentStage = Mathf.Clamp(startingStage, 0, stages.Length - 1);
         initialized = true;
         ApplyStage();
@@ -60,15 +80,37 @@ public class RoomProgression : MonoBehaviour
 
     public void NextStage()
     {
-        if (applying || !Initialize()) return;
-        if (CurrentStage >= stages.Length - 1) return;
+        if (applying)
+        {
+            return;
+        }
+
+        if (!Initialize())
+        {
+            return;
+        }
+
+        if (CurrentStage >= stages.Length - 1)
+        {
+            return;
+        }
+
         CurrentStage++;
         ApplyStage();
     }
 
     public void RestartProgression()
     {
-        if (applying || !Initialize()) return;
+        if (applying)
+        {
+            return;
+        }
+
+        if (!Initialize())
+        {
+            return;
+        }
+
         CurrentStage = Mathf.Clamp(startingStage, 0, stages.Length - 1);
         ApplyStage();
     }
@@ -76,18 +118,34 @@ public class RoomProgression : MonoBehaviour
     private void ApplyStage()
     {
         applying = true;
+
         try
         {
-            // Hide previous visuals before showing the next set.
             for (int i = 0; i < stages.Length; i++)
+            {
                 if (i != CurrentStage && stages[i].objects != null)
+                {
                     stages[i].objects.SetActive(false);
+                }
+            }
+
             if (stages[CurrentStage].objects != null)
+            {
                 stages[CurrentStage].objects.SetActive(true);
-            Debug.Log("Room stage " + (CurrentStage + 1) + ": " +
-                      stages[CurrentStage].stageName, this);
-            stages[CurrentStage].onEnter?.Invoke();
+            }
+
+            RoomStage current = stages[CurrentStage];
+            int stageNumber = CurrentStage + 1;
+            Debug.Log("Room stage " + stageNumber + ": " + current.stageName, this);
+
+            if (current.onEnter != null)
+            {
+                current.onEnter.Invoke();
+            }
         }
-        finally { applying = false; }
+        finally
+        {
+            applying = false;
+        }
     }
 }
