@@ -3,7 +3,6 @@ using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.InputSystem;
 
-// Attach to the Player root. Keep this component and PlayerInput enabled.
 public class ObjectInteraction : MonoBehaviour
 {
     [Serializable]
@@ -11,9 +10,7 @@ public class ObjectInteraction : MonoBehaviour
     {
         public string displayName;
         public Transform target;
-        [Tooltip("Enable for the bed: invoke its event without entering inspection.")]
         public bool eventOnly;
-        [Tooltip("Camera position and rotation while inspecting. Its blue Z axis faces the object.")]
         public Transform focusPoint;
         public UnityEvent onInteract = new UnityEvent();
     }
@@ -21,112 +18,129 @@ public class ObjectInteraction : MonoBehaviour
     [Header("Detection")]
     public Camera playerCamera;
     [Min(0.1f)] public float interactionDistance = 3f;
-    [Tooltip("Include walls and furniture so they block interactions through them.")]
     public LayerMask raycastLayers = Physics.DefaultRaycastLayers;
     public InteractionTarget[] targets = new InteractionTarget[0];
 
     [Header("Inspection")]
-    [Tooltip("Drag PlayerControllerNewInputSys here. Do NOT add PlayerInput or this component.")]
     public Behaviour[] controlsToPause = new Behaviour[0];
     [Min(0f)] public float transitionDuration = 0.35f;
     public bool showPrompt = true;
 
     private InteractionTarget hovered;
-    private Transform activeFocus;
+    private Transform focus;
     private bool inspecting;
     private bool returning;
     private float elapsed;
     private float nextInteractionTime;
-    private Vector3 originalLocalPosition;
-    private Quaternion originalLocalRotation;
-    private Vector3 transitionPosition;
-    private Quaternion transitionRotation;
+    private Vector3 originalPosition;
+    private Quaternion originalRotation;
+    private Vector3 startPosition;
+    private Quaternion startRotation;
     private Behaviour[] pausedControls;
-    private bool[] previousEnabled;
+    private bool[] wasEnabled;
 
     private void Awake()
     {
-        if (playerCamera == null) playerCamera = GetComponentInChildren<Camera>();
         if (playerCamera == null)
-            Debug.LogError("ObjectInteraction: assign the player's Camera.", this);
+            playerCamera = GetComponentInChildren<Camera>();
+
+        if (playerCamera == null)
+            Debug.LogError("Assign the player's Camera.", this);
     }
 
     private void Update()
     {
         if (playerCamera == null) return;
-        hovered = inspecting ? null : FindTarget();
+
+        if (!inspecting)
+            hovered = FindTarget();
 
         Keyboard keyboard = Keyboard.current;
         if (keyboard == null) return;
 
+        bool pressedE = keyboard.eKey.wasPressedThisFrame;
         if (inspecting)
         {
-            if (!returning && (keyboard.eKey.wasPressedThisFrame ||
-                              keyboard.escapeKey.wasPressedThisFrame))
+            if (!returning && (pressedE || keyboard.escapeKey.wasPressedThisFrame))
                 BeginReturn();
             return;
         }
 
-        if (!keyboard.eKey.wasPressedThisFrame || hovered == null ||
-            Time.unscaledTime < nextInteractionTime) return;
+        if (!pressedE || hovered == null || Time.unscaledTime < nextInteractionTime)
+            return;
 
         InteractionTarget selected = hovered;
         nextInteractionTime = Time.unscaledTime + 0.5f;
-        if (selected.eventOnly)
+
+        if (!selected.eventOnly)
         {
-            selected.onInteract?.Invoke();
-            return;
+            Transform point = selected.focusPoint;
+            if (point == null)
+            {
+                Debug.LogWarning("Assign a Focus Point for " + selected.displayName, this);
+                return;
+            }
+
+            Transform cam = playerCamera.transform;
+            if (point == cam || point.IsChildOf(cam))
+            {
+                Debug.LogWarning("Move the Focus Point outside the camera hierarchy.", this);
+                return;
+            }
+
+            BeginInspection(point);
         }
 
-        if (selected.focusPoint == null)
-        {
-            Debug.LogWarning("Assign a Focus Point for " + selected.displayName, this);
-            return;
-        }
-        if (selected.focusPoint == playerCamera.transform ||
-            selected.focusPoint.IsChildOf(playerCamera.transform))
-        {
-            Debug.LogWarning("Focus Point must not be inside the player camera hierarchy.", this);
-            return;
-        }
-
-        BeginInspection(selected.focusPoint);
-        selected.onInteract?.Invoke();
+        if (selected.onInteract != null)
+            selected.onInteract.Invoke();
     }
 
     private InteractionTarget FindTarget()
     {
-        Ray ray = playerCamera.ViewportPointToRay(new Vector3(0.5f, 0.5f, 0));
-        if (!Physics.Raycast(ray, out RaycastHit hit, interactionDistance,
-                             raycastLayers, QueryTriggerInteraction.Ignore)) return null;
         if (targets == null) return null;
+
+        Ray ray = playerCamera.ViewportPointToRay(new Vector3(0.5f, 0.5f, 0f));
+        RaycastHit hit;
+        if (!Physics.Raycast(ray, out hit, interactionDistance,
+                            raycastLayers, QueryTriggerInteraction.Ignore))
+            return null;
+
         foreach (InteractionTarget item in targets)
         {
             if (item == null || item.target == null) continue;
             if (hit.transform == item.target || hit.transform.IsChildOf(item.target))
                 return item;
         }
+
         return null;
     }
 
     private void BeginInspection(Transform point)
     {
         Transform cam = playerCamera.transform;
-        originalLocalPosition = cam.localPosition;
-        originalLocalRotation = cam.localRotation;
-        pausedControls = controlsToPause == null
-            ? new Behaviour[0] : (Behaviour[])controlsToPause.Clone();
-        previousEnabled = new bool[pausedControls.Length];
-        // Capture all states before disabling, including duplicate entries.
+        originalPosition = cam.localPosition;
+        originalRotation = cam.localRotation;
+
+        pausedControls = new Behaviour[0];
+        if (controlsToPause != null)
+            pausedControls = (Behaviour[])controlsToPause.Clone();
+
+        wasEnabled = new bool[pausedControls.Length];
+
         for (int i = 0; i < pausedControls.Length; i++)
-            if (pausedControls[i] != null) previousEnabled[i] = pausedControls[i].enabled;
+        {
+            if (pausedControls[i] != null)
+                wasEnabled[i] = pausedControls[i].enabled;
+        }
+
         for (int i = 0; i < pausedControls.Length; i++)
         {
             Behaviour control = pausedControls[i];
             if (control != null && control != this && !(control is PlayerInput))
                 control.enabled = false;
         }
-        activeFocus = point;
+
+        focus = point;
         inspecting = true;
         returning = false;
         StartTransition();
@@ -135,8 +149,8 @@ public class ObjectInteraction : MonoBehaviour
     private void StartTransition()
     {
         elapsed = 0f;
-        transitionPosition = playerCamera.transform.position;
-        transitionRotation = playerCamera.transform.rotation;
+        startPosition = playerCamera.transform.position;
+        startRotation = playerCamera.transform.rotation;
     }
 
     private void BeginReturn()
@@ -148,59 +162,88 @@ public class ObjectInteraction : MonoBehaviour
     private void LateUpdate()
     {
         if (!inspecting || playerCamera == null) return;
-        if (!returning && (activeFocus == null || !activeFocus.gameObject.activeInHierarchy))
+
+        if (!returning && (focus == null || !focus.gameObject.activeInHierarchy))
             BeginReturn();
 
         Transform cam = playerCamera.transform;
-        Transform parent = cam.parent;
-        Vector3 endPosition = returning
-            ? (parent == null ? originalLocalPosition : parent.TransformPoint(originalLocalPosition))
-            : activeFocus.position;
-        Quaternion endRotation = returning
-            ? (parent == null ? originalLocalRotation : parent.rotation * originalLocalRotation)
-            : activeFocus.rotation;
+        Vector3 endPosition;
+        Quaternion endRotation;
+
+        if (returning)
+        {
+            endPosition = originalPosition;
+            endRotation = originalRotation;
+            if (cam.parent != null)
+            {
+                endPosition = cam.parent.TransformPoint(originalPosition);
+                endRotation = cam.parent.rotation * originalRotation;
+            }
+        }
+        else
+        {
+            endPosition = focus.position;
+            endRotation = focus.rotation;
+        }
 
         elapsed += Time.unscaledDeltaTime;
-        float t = transitionDuration <= 0f ? 1f : Mathf.Clamp01(elapsed / transitionDuration);
-        float smooth = t * t * (3f - 2f * t);
+        float progress = 1f;
+        if (transitionDuration > 0f)
+            progress = Mathf.Clamp01(elapsed / transitionDuration);
+
+        float smooth = Mathf.SmoothStep(0f, 1f, progress);
         cam.SetPositionAndRotation(
-            Vector3.Lerp(transitionPosition, endPosition, smooth),
-            Quaternion.Slerp(transitionRotation, endRotation, smooth));
-        if (returning && t >= 1f) RestoreInspection();
+            Vector3.Lerp(startPosition, endPosition, smooth),
+            Quaternion.Slerp(startRotation, endRotation, smooth));
+
+        if (returning && progress >= 1f)
+            RestoreInspection();
     }
 
     private void RestoreInspection()
     {
         if (!inspecting) return;
+
         inspecting = false;
         returning = false;
+
         if (playerCamera != null)
         {
-            playerCamera.transform.localPosition = originalLocalPosition;
-            playerCamera.transform.localRotation = originalLocalRotation;
+            playerCamera.transform.localPosition = originalPosition;
+            playerCamera.transform.localRotation = originalRotation;
         }
-        if (pausedControls != null)
+
+        for (int i = 0; i < pausedControls.Length; i++)
         {
-            for (int i = 0; i < pausedControls.Length; i++)
-            {
-                Behaviour control = pausedControls[i];
-                if (control != null && control != this && !(control is PlayerInput))
-                    control.enabled = previousEnabled[i];
-            }
+            Behaviour control = pausedControls[i];
+            if (control != null && control != this && !(control is PlayerInput))
+                control.enabled = wasEnabled[i];
         }
-        activeFocus = null;
+
+        focus = null;
         hovered = null;
         nextInteractionTime = Time.unscaledTime + 0.2f;
     }
 
-    private void OnDisable() { RestoreInspection(); }
+    private void OnDisable()
+    {
+        RestoreInspection();
+    }
 
     private void OnGUI()
     {
         if (!showPrompt || playerCamera == null) return;
-        GUI.Label(new Rect(Screen.width / 2f - 3f, Screen.height / 2f - 10f, 20f, 25f), "+");
-        string prompt = inspecting ? "E / Esc - Return" :
-            hovered == null ? "" : "E - " + hovered.displayName;
-        GUI.Label(new Rect(Screen.width / 2f - 140f, Screen.height - 70f, 400f, 30f), prompt);
+
+        float centerX = Screen.width / 2f;
+        float centerY = Screen.height / 2f;
+        GUI.Label(new Rect(centerX - 3f, centerY - 10f, 20f, 25f), "+");
+
+        string prompt = "";
+        if (inspecting)
+            prompt = "E / Esc - Return";
+        else if (hovered != null)
+            prompt = "E - " + hovered.displayName;
+
+        GUI.Label(new Rect(centerX - 140f, Screen.height - 70f, 400f, 30f), prompt);
     }
 }
