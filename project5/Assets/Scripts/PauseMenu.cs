@@ -1,4 +1,3 @@
-
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -18,7 +17,9 @@ public class PauseMenu : MonoBehaviour
     public void Pause(InputAction.CallbackContext context)
     {
         if (!context.performed)
+        {
             return;
+        }
 
         if (isPaused)
         {
@@ -34,7 +35,6 @@ public class PauseMenu : MonoBehaviour
     {
         isPaused = true;
         pausePanel.SetActive(true);
-
         Time.timeScale = 0f;
 
         Cursor.lockState = CursorLockMode.None;
@@ -45,7 +45,6 @@ public class PauseMenu : MonoBehaviour
     {
         isPaused = false;
         pausePanel.SetActive(false);
-
         Time.timeScale = 1f;
 
         Cursor.lockState = CursorLockMode.Locked;
@@ -55,11 +54,6 @@ public class PauseMenu : MonoBehaviour
     public void QuitGame()
     {
         Time.timeScale = 1f;
-
-#if UNITY_EDITOR
-        UnityEditor.EditorApplication.isPlaying = false;
-#else
         Application.Quit();
-#endif
     }
 }
