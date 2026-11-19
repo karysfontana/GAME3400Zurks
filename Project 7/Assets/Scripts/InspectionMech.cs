@@ -27,19 +27,17 @@ public class InspectionMech : MonoBehaviour
     private InputActionMap gameplayMap;
     private InputActionMap inspectionMap;
 
-    // Set up interaction input 
+
     private void OnEnable()
     {
         if (interact != null)
         {
-            // FORCE WAKE UP: This tells the Input System to listen to this key
             interact.action.Enable(); 
             interact.action.performed += OnInteractPressed;
         }
         
         if (cancel != null)
         {
-            // This must also be enabled to listen for the exit/cancel key
             cancel.action.Enable(); 
             cancel.action.performed += OnCancelPressed;
         }
@@ -51,7 +49,6 @@ public class InspectionMech : MonoBehaviour
         cancel.action.performed -= OnCancelPressed;
     }
 
-    // Call for inspection
     private void OnInteractPressed(InputAction.CallbackContext context)
     {
         if (playerInput != null && playerInput.currentActionMap.name == inspectionMapName) return;
@@ -63,13 +60,11 @@ public class InspectionMech : MonoBehaviour
         }
     }
 
-    // Call for cancel
     private void OnCancelPressed(InputAction.CallbackContext context)
     {
         StopInspection();
     }
 
-    // inspection mechanics here guys
     private void StartInspection(GameObject obj)
     {
         inspectedObject = obj; 
@@ -79,12 +74,10 @@ public class InspectionMech : MonoBehaviour
         inspectionSound.Play();
         }
 
-        // save original states
         originalParent = inspectedObject.transform.parent;
         originalPosition = inspectedObject.transform.position;
         originalRotation = inspectedObject.transform.rotation;
 
-        // Position Obj 
         if (obj.TryGetComponent<Renderer>(out var renderer))
         {
             Vector3 meshCenterOffset = obj.transform.position - renderer.bounds.center;
@@ -98,14 +91,12 @@ public class InspectionMech : MonoBehaviour
             inspectedObject.transform.localPosition = Vector3.zero;
         }
         inspectedObject.transform.localRotation = Quaternion.Inverse(inspectionPoint.rotation) * originalRotation;
-       // inspectedObject.transform.localRotation = Quaternion.identity;
 
         if (inspectedObject.TryGetComponent<Rigidbody>(out var rb))
         {
             rb.isKinematic = true;
         }
 
-        // Fixing obj automatically rotating to where cursor last was
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
         if (rotate != null)
@@ -134,7 +125,6 @@ public class InspectionMech : MonoBehaviour
     {
         if (inspectedObject == null) return;
 
-        // Reset object transform vals to original world placements & return RB to normal
         inspectedObject.transform.SetParent(originalParent);
         inspectedObject.transform.position = originalPosition;
         inspectedObject.transform.rotation = originalRotation;
@@ -148,14 +138,12 @@ public class InspectionMech : MonoBehaviour
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
 
-        // return player map
         if (playerInput != null)
         {
             playerInput.SwitchCurrentActionMap(gameplayMapName);
         }
     }
 
-    // Update is called once per frame
     void Update()
     {
         if (playerInput != null && playerInput.currentActionMap.name == inspectionMapName)
